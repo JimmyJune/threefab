@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 /** 
  * @class THREEFAB.OutlinerView
  * 
  * @author itooamaneatguy / http://kadrmasconcepts.com/blog/
  * @description Setup outliner view.
  * 
+=======
+/**
+ * @class THREEFAB.OutlinerView
+ *
+ * @author itooamaneatguy / http://kadrmasconcepts.com/blog/
+ * @description Setup outliner view.
+ *
+>>>>>>> master
  */
 
 
@@ -22,11 +31,19 @@ THREEFAB.OutlinerView = Backbone.View.extend({
 		this.el.append(this.select);
 		this.select.bind('change', this.change);
 
+<<<<<<< HEAD
 		$.subscribe( 'viewport/object/added', this.render );
 		$.subscribe( 'viewport/object/removed', this.render );
 		
 		$.subscribe('viewport/mesh/selected', this.updateSelected);
 		$.subscribe('viewport/light/selected', this.updateSelected);
+=======
+		$.subscribe( THREEFAB.Events.VIEWPORT_OBJECT_ADDED, this.render );
+		$.subscribe( THREEFAB.Events.VIEWPORT_OBJECT_REMOVED, this.render );
+		
+		$.subscribe(THREEFAB.Events.VIEWPORT_MESH_SELECTED, this.updateSelected);
+		$.subscribe(THREEFAB.Events.VIEWPORT_LIGHT_SELECTED, this.updateSelected);
+>>>>>>> master
 	},
 
 
@@ -39,7 +56,11 @@ THREEFAB.OutlinerView = Backbone.View.extend({
 
 	change: function() {
 
+<<<<<<< HEAD
 		$.publish( 'outliner/changed', this.select.val() );
+=======
+		$.publish( THREEFAB.Events.OUTLINER_CHANGED, this.select.val() );
+>>>>>>> master
 	},
 
 	updateSelected: function(object) {
@@ -56,6 +77,7 @@ THREEFAB.OutlinerView = Backbone.View.extend({
 		
 		for(var i=0, len = children.length; i < len; i++) {
 		
+<<<<<<< HEAD
 			if(children[i].name) {   	
 
 				opt = document.createElement('option');
@@ -63,6 +85,14 @@ THREEFAB.OutlinerView = Backbone.View.extend({
 		        opt.setAttribute('value', children[i].name);
 		        this.select.append(opt);
 
+=======
+			if(children[i].name && children[i].name !== 'THREE.PointLight' && children[i].name !== 'THREE.SpotLight' && children[i].name !== 'THREE.AmbientLight') {
+
+				opt = document.createElement('option');
+				opt.innerHTML = children[i].name;
+				opt.setAttribute('value', children[i].name);
+				this.select.append(opt);
+>>>>>>> master
 			}
 
 		}

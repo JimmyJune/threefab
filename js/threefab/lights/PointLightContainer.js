@@ -11,7 +11,11 @@ THREEFAB.PointLightContainer = function ( scene, hex, intensity, distance ) {
 		
 	var lineGeometry = new THREE.Geometry();
 	lineGeometry.vertices.push( new THREE.Vertex() );
+<<<<<<< HEAD
 	lineGeometry.vertices.push( new THREE.Vertex( new THREE.Vector3( 0, 30, 1 ) ) );	
+=======
+	lineGeometry.vertices.push( new THREE.Vertex( new THREE.Vector3( 0, 30, 1 ) ) );
+>>>>>>> master
 	
 	var line = new THREE.Line( lineGeometry, new THREE.LineBasicMaterial( { color : 0xFFFFFF } ) );
 	line.rotation.z = - Math.PI;
@@ -20,6 +24,10 @@ THREEFAB.PointLightContainer = function ( scene, hex, intensity, distance ) {
 	
 	
 	var light = new THREE.PointLight(hex, intensity, distance);
+<<<<<<< HEAD
+=======
+	light.name = 'THREE.PointLight';
+>>>>>>> master
 	
 	// Link light position and rotation to the fake holder object.
 	light.position = mesh.position;

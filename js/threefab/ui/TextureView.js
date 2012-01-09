@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 /** 
  * @class THREEFAB.TextureView
  * 
  * @author itooamaneatguy / http://kadrmasconcepts.com/blog/
  * @description Setup texture view.
  * 
+=======
+/**
+ * @class THREEFAB.TextureView
+ *
+ * @author itooamaneatguy / http://kadrmasconcepts.com/blog/
+ * @description Setup texture view.
+ *
+>>>>>>> master
  */
 
 
@@ -22,6 +31,10 @@ THREEFAB.TextureView = Backbone.View.extend({
 		this.el.css({height:40, paddingTop:'5px'});
 		this.texture.width = this.texture.height = 30;
 		this.texture = $(this.texture);
+<<<<<<< HEAD
+=======
+		this.texture.addClass('texture-container');
+>>>>>>> master
 
 		this.label = $(this.label);
 		this.label.html('X');
@@ -31,9 +44,15 @@ THREEFAB.TextureView = Backbone.View.extend({
 		this.el.append(this.texture);
 		this.el.append(this.label);
 
+<<<<<<< HEAD
 		$.subscribe('viewport/mesh/selected', this.render);
 		$.subscribe('viewport/light/selected', this.render);
 		$.subscribe('viewport/object/texture/added', this.render);
+=======
+		$.subscribe(THREEFAB.Events.VIEWPORT_MESH_SELECTED, this.render);
+		$.subscribe(THREEFAB.Events.VIEWPORT_LIGHT_SELECTED, this.render);
+		$.subscribe(THREEFAB.Events.VIEWPORT_OBJECT_TEXTURE_ADDED, this.render);
+>>>>>>> master
 	},
 
 
@@ -55,14 +74,22 @@ THREEFAB.TextureView = Backbone.View.extend({
 			}
 		} else {
 			this.reset();
+<<<<<<< HEAD
 		}		
+=======
+		}
+>>>>>>> master
 	},
 
 	clear: function() {
 		
 		this.reset();
 
+<<<<<<< HEAD
 		$.publish('texture/clear');
+=======
+		$.publish(THREEFAB.Events.TEXTURE_CLEAR);
+>>>>>>> master
 
 	},
 

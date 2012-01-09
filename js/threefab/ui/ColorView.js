@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 /** 
  * @class THREEFAB.ColorView
  * 
  * @author itooamaneatguy / http://kadrmasconcepts.com/blog/
  * @description Setup color view.
  * 
+=======
+/**
+ * @class THREEFAB.ColorView
+ *
+ * @author itooamaneatguy / http://kadrmasconcepts.com/blog/
+ * @description Setup color view.
+ *
+>>>>>>> master
  */
 
 
@@ -37,7 +46,11 @@ THREEFAB.ColorView = Backbone.View.extend({
 		this.el.append( this.types.ambient );
 		this.el.append( this.types.specular );
 
+<<<<<<< HEAD
 		$.subscribe('viewport/mesh/selected', this.meshChanged);
+=======
+		$.subscribe(THREEFAB.Events.VIEWPORT_MESH_SELECTED, this.meshChanged);
+>>>>>>> master
 	},
 
 	meshChanged: function( object ) {
@@ -54,19 +67,31 @@ THREEFAB.ColorView = Backbone.View.extend({
 	changeColor: function( hsb, hex, rgb ) {
 	
 		this.update(this.types.color, rgb);
+<<<<<<< HEAD
 		$.publish('material/color/changed', [rgb, 'color']);
+=======
+		$.publish(THREEFAB.Events.MATERIAL_COLOR_CHANGED, [rgb, 'color']);
+>>>>>>> master
 	},
 
 	changeAmbient: function( hsb, hex, rgb ) {
 	
 		this.update(this.types.ambient, rgb);
+<<<<<<< HEAD
 		$.publish('material/color/changed', [rgb, 'ambient']);
+=======
+		$.publish(THREEFAB.Events.MATERIAL_COLOR_CHANGED, [rgb, 'ambient']);
+>>>>>>> master
 	},
 
 	changeSpecular: function( hsb, hex, rgb ) {
 	
 		this.update(this.types.specular, rgb);
+<<<<<<< HEAD
 		$.publish('material/color/changed', [rgb, 'specular']);
+=======
+		$.publish(THREEFAB.Events.MATERIAL_COLOR_CHANGED, [rgb, 'specular']);
+>>>>>>> master
 	},
 
 	update: function(type, rgb) {
