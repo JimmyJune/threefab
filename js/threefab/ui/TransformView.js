@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /** 
  * @class THREEFAB.TransformView
  * 
@@ -8,6 +9,8 @@
  * @description Setup transform view.
  * 
 =======
+=======
+>>>>>>> master
 =======
 >>>>>>> master
 =======
@@ -20,6 +23,9 @@
  *
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 =======
 >>>>>>> master
@@ -42,7 +48,11 @@ THREEFAB.TransformView = Backbone.View.extend({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		transforms:{},
+=======
+		transforms:{}
+>>>>>>> master
 =======
 		transforms:{}
 >>>>>>> master
@@ -65,8 +75,13 @@ THREEFAB.TransformView = Backbone.View.extend({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		$.subscribe('viewport/mesh/selected', this.addTransformOptions);
 		$.subscribe('viewport/light/selected', this.addTransformOptions);
+=======
+		$.subscribe(THREEFAB.Events.VIEWPORT_MESH_SELECTED, this.addTransformOptions);
+		$.subscribe(THREEFAB.Events.VIEWPORT_LIGHT_SELECTED, this.addTransformOptions);
+>>>>>>> master
 =======
 		$.subscribe(THREEFAB.Events.VIEWPORT_MESH_SELECTED, this.addTransformOptions);
 		$.subscribe(THREEFAB.Events.VIEWPORT_LIGHT_SELECTED, this.addTransformOptions);
@@ -145,7 +160,11 @@ THREEFAB.TransformView = Backbone.View.extend({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 			// Scale 
+=======
+			// Scale
+>>>>>>> master
 =======
 			// Scale
 >>>>>>> master

@@ -334,24 +334,6 @@ body {
   left: 0;
   z-index: 2;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-#toolbox ul.toolbox-list {
-  float: right;
-  margin: 0;
-  padding: 0 15px 0 0;
-}
-#toolbox ul.toolbox-list li {
-  float: left;
-  list-style: none;
-}
-#toolbox ul.toolbox-list li a {
-=======
-=======
->>>>>>> master
-=======
->>>>>>> master
 #toolbox #logo {
   float: left;
   width: 209px;
@@ -379,51 +361,11 @@ body {
   list-style: none;
 }
 #toolbox .righttools ul.toolbox-list li a {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
   display: block;
   width: 35px;
   height: 35px;
   background: url(../img/toolbox.png);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-#toolbox ul.toolbox-list li a.cube {
-  background-position: -35px 0;
-}
-#toolbox ul.toolbox-list li a.cylinder {
-  background-position: -70px 0;
-}
-#toolbox ul.toolbox-list li a.cone {
-  background-position: -105px 0;
-}
-#toolbox ul.toolbox-list li a.plane {
-  background-position: -140px 0;
-}
-#toolbox ul.toolbox-list li a.torus {
-  background-position: -175px 0;
-}
-#toolbox ul.light-list {
-  float: right;
-  margin: 0;
-  padding: 0 15px 0 0;
-}
-#toolbox ul.light-list li {
-  float: left;
-  list-style: none;
-}
-#toolbox ul.light-list li a {
-=======
-=======
->>>>>>> master
-=======
->>>>>>> master
 #toolbox .righttools ul.toolbox-list li a.cube {
   background-position: -35px 0;
 }
@@ -449,33 +391,11 @@ body {
   list-style: none;
 }
 #toolbox .righttools ul.light-list li a {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
   display: block;
   width: 35px;
   height: 35px;
   background: url(../img/lights.png);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-#toolbox ul.light-list li a.spot {
-  background-position: -35px 0;
-}
-#toolbox ul.light-list li a.ambient {
-  background-position: -70px 0;
-}
-#toolbox ul.light-list li a.directional {
-=======
-=======
->>>>>>> master
-=======
->>>>>>> master
 #toolbox .righttools ul.light-list li a.spot {
   background-position: -35px 0;
 }
@@ -483,13 +403,6 @@ body {
   background-position: -70px 0;
 }
 #toolbox .righttools ul.light-list li a.directional {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
   background-position: -105px 0;
 }
 #gui-transform-container {
@@ -544,14 +457,6 @@ body {
 .fl {
   float: left;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> master
-=======
->>>>>>> master
 .button {
   background: whiteSmoke;
   background-image: -moz-linear-gradient(top, #f5f5f5, #f1f1f1);
@@ -563,13 +468,6 @@ body {
   margin: 0 -1px;
   height: 27px;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
 .color_preview_container {
   float: left;
   padding-right: 20px;
@@ -582,14 +480,6 @@ body {
   cursor: pointer;
   border: 4px solid #333333;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> master
-=======
->>>>>>> master
 .texture-container {
   cursor: pointer;
   border: 4px solid #333333;
@@ -679,13 +569,6 @@ body {
   width: 0;
   height: 0;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
 /* ==|== non-semantic helper classes ========================================
    Please define your styles before this section.
    ========================================================================== */

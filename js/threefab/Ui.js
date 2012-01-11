@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /** 
  * @class THREEFAB.Ui
  * 
@@ -9,6 +10,8 @@
  * @param [THREEFAB.Viewport] viewport The instance of the viewport class.	
  * 
 =======
+=======
+>>>>>>> master
 =======
 >>>>>>> master
 =======
@@ -22,6 +25,9 @@
  *
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 =======
 >>>>>>> master
@@ -43,7 +49,11 @@ THREEFAB.Ui = function(viewport) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+};
+>>>>>>> master
 =======
 };
 >>>>>>> master
@@ -89,12 +99,15 @@ THREEFAB.Ui.utils = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 				
 				/*if(list[i].onChange !== undefined) {
 					
 					tmp_controller.onChange(view[list[i].onChange].apply(view, [undefined]));
 					console.log("Setup :: Changing Property :: ");
 				}*/
+=======
+>>>>>>> master
 =======
 >>>>>>> master
 =======

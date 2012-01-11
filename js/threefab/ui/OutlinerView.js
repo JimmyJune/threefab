@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /** 
  * @class THREEFAB.OutlinerView
  * 
@@ -8,6 +9,8 @@
  * @description Setup outliner view.
  * 
 =======
+=======
+>>>>>>> master
 =======
 >>>>>>> master
 =======
@@ -20,6 +23,9 @@
  *
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 =======
 >>>>>>> master
@@ -46,12 +52,15 @@ THREEFAB.OutlinerView = Backbone.View.extend({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		$.subscribe( 'viewport/object/added', this.render );
 		$.subscribe( 'viewport/object/removed', this.render );
 		
 		$.subscribe('viewport/mesh/selected', this.updateSelected);
 		$.subscribe('viewport/light/selected', this.updateSelected);
 =======
+=======
+>>>>>>> master
 =======
 >>>>>>> master
 =======
@@ -63,6 +72,9 @@ THREEFAB.OutlinerView = Backbone.View.extend({
 		$.subscribe(THREEFAB.Events.VIEWPORT_LIGHT_SELECTED, this.updateSelected);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 =======
 >>>>>>> master
@@ -83,7 +95,11 @@ THREEFAB.OutlinerView = Backbone.View.extend({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		$.publish( 'outliner/changed', this.select.val() );
+=======
+		$.publish( THREEFAB.Events.OUTLINER_CHANGED, this.select.val() );
+>>>>>>> master
 =======
 		$.publish( THREEFAB.Events.OUTLINER_CHANGED, this.select.val() );
 >>>>>>> master
@@ -112,6 +128,7 @@ THREEFAB.OutlinerView = Backbone.View.extend({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 			if(children[i].name) {   	
 
 				opt = document.createElement('option');
@@ -124,6 +141,8 @@ THREEFAB.OutlinerView = Backbone.View.extend({
 >>>>>>> master
 =======
 >>>>>>> master
+=======
+>>>>>>> master
 			if(children[i].name && children[i].name !== 'THREE.PointLight' && children[i].name !== 'THREE.SpotLight' && children[i].name !== 'THREE.AmbientLight') {
 
 				opt = document.createElement('option');
@@ -132,6 +151,9 @@ THREEFAB.OutlinerView = Backbone.View.extend({
 				this.select.append(opt);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 =======
 >>>>>>> master
