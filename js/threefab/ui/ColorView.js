@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /** 
  * @class THREEFAB.ColorView
  * 
@@ -9,6 +10,8 @@
 =======
 =======
 >>>>>>> master
+=======
+>>>>>>> master
 /**
  * @class THREEFAB.ColorView
  *
@@ -16,6 +19,9 @@
  * @description Setup color view.
  *
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 =======
 >>>>>>> master
@@ -54,7 +60,11 @@ THREEFAB.ColorView = Backbone.View.extend({
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		$.subscribe('viewport/mesh/selected', this.meshChanged);
+=======
+		$.subscribe(THREEFAB.Events.VIEWPORT_MESH_SELECTED, this.meshChanged);
+>>>>>>> master
 =======
 		$.subscribe(THREEFAB.Events.VIEWPORT_MESH_SELECTED, this.meshChanged);
 >>>>>>> master
@@ -79,7 +89,11 @@ THREEFAB.ColorView = Backbone.View.extend({
 		this.update(this.types.color, rgb);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		$.publish('material/color/changed', [rgb, 'color']);
+=======
+		$.publish(THREEFAB.Events.MATERIAL_COLOR_CHANGED, [rgb, 'color']);
+>>>>>>> master
 =======
 		$.publish(THREEFAB.Events.MATERIAL_COLOR_CHANGED, [rgb, 'color']);
 >>>>>>> master
@@ -93,7 +107,11 @@ THREEFAB.ColorView = Backbone.View.extend({
 		this.update(this.types.ambient, rgb);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		$.publish('material/color/changed', [rgb, 'ambient']);
+=======
+		$.publish(THREEFAB.Events.MATERIAL_COLOR_CHANGED, [rgb, 'ambient']);
+>>>>>>> master
 =======
 		$.publish(THREEFAB.Events.MATERIAL_COLOR_CHANGED, [rgb, 'ambient']);
 >>>>>>> master
@@ -107,7 +125,11 @@ THREEFAB.ColorView = Backbone.View.extend({
 		this.update(this.types.specular, rgb);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		$.publish('material/color/changed', [rgb, 'specular']);
+=======
+		$.publish(THREEFAB.Events.MATERIAL_COLOR_CHANGED, [rgb, 'specular']);
+>>>>>>> master
 =======
 		$.publish(THREEFAB.Events.MATERIAL_COLOR_CHANGED, [rgb, 'specular']);
 >>>>>>> master

@@ -12,9 +12,15 @@ THREEFAB.Toolbox = Backbone.View.extend({
 				className = target.className;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 				$.publish('primitive/add', target.className);				
 			}
 		});	
+=======
+				$.publish(THREEFAB.Events.PRIMITIVE_ADDED, target.className);
+			}
+		});
+>>>>>>> master
 =======
 				$.publish(THREEFAB.Events.PRIMITIVE_ADDED, target.className);
 			}
@@ -36,10 +42,13 @@ THREEFAB.Toolbox = Backbone.View.extend({
 				className = target.className;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 				$.publish('light/add', target.className);
 			}
 		});
 =======
+=======
+>>>>>>> master
 =======
 >>>>>>> master
 				$.publish(THREEFAB.Events.LIGHT_ADDED, target.className);
@@ -50,6 +59,9 @@ THREEFAB.Toolbox = Backbone.View.extend({
 			$.publish(THREEFAB.Events.EXPORTER_GENERATE);
 		});
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 =======
 >>>>>>> master

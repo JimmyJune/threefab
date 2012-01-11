@@ -13,6 +13,7 @@
 		var dragDrop = new THREEFAB.DragDropLoader(),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	    viewport = new THREEFAB.Viewport(),
 	    ui = new THREEFAB.Ui(viewport),
 		toolbox = new THREEFAB.Toolbox();
@@ -20,6 +21,8 @@
 		// App Resize
 		window.addEventListener('resize', function(event) { 
 =======
+=======
+>>>>>>> master
 =======
 >>>>>>> master
 			viewport = new THREEFAB.Viewport(),
@@ -30,6 +33,9 @@
 		// App Resize
 		window.addEventListener('resize', function(event) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 =======
 >>>>>>> master
@@ -39,6 +45,7 @@
 		
 		// Start animating viewport
 		viewport.animate();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 		
@@ -70,6 +77,8 @@ function wheel(event){
 =======
 =======
 >>>>>>> master
+=======
+>>>>>>> master
 		viewport.setSize( window.innerWidth, window.innerHeight );
 
 		//exporter.generate(viewport);
@@ -84,6 +93,10 @@ function wheel(event){
 	});
 	
 <<<<<<< HEAD
+<<<<<<< HEAD
+})();
+>>>>>>> master
+=======
 })();
 >>>>>>> master
 =======

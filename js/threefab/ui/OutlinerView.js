@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /** 
  * @class THREEFAB.OutlinerView
  * 
@@ -9,6 +10,8 @@
 =======
 =======
 >>>>>>> master
+=======
+>>>>>>> master
 /**
  * @class THREEFAB.OutlinerView
  *
@@ -16,6 +19,9 @@
  * @description Setup outliner view.
  *
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 =======
 >>>>>>> master
@@ -39,6 +45,7 @@ THREEFAB.OutlinerView = Backbone.View.extend({
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		$.subscribe( 'viewport/object/added', this.render );
 		$.subscribe( 'viewport/object/removed', this.render );
 		
@@ -47,12 +54,17 @@ THREEFAB.OutlinerView = Backbone.View.extend({
 =======
 =======
 >>>>>>> master
+=======
+>>>>>>> master
 		$.subscribe( THREEFAB.Events.VIEWPORT_OBJECT_ADDED, this.render );
 		$.subscribe( THREEFAB.Events.VIEWPORT_OBJECT_REMOVED, this.render );
 		
 		$.subscribe(THREEFAB.Events.VIEWPORT_MESH_SELECTED, this.updateSelected);
 		$.subscribe(THREEFAB.Events.VIEWPORT_LIGHT_SELECTED, this.updateSelected);
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 =======
 >>>>>>> master
@@ -70,7 +82,11 @@ THREEFAB.OutlinerView = Backbone.View.extend({
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		$.publish( 'outliner/changed', this.select.val() );
+=======
+		$.publish( THREEFAB.Events.OUTLINER_CHANGED, this.select.val() );
+>>>>>>> master
 =======
 		$.publish( THREEFAB.Events.OUTLINER_CHANGED, this.select.val() );
 >>>>>>> master
@@ -95,6 +111,7 @@ THREEFAB.OutlinerView = Backbone.View.extend({
 		
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 			if(children[i].name) {   	
 
 				opt = document.createElement('option');
@@ -105,6 +122,8 @@ THREEFAB.OutlinerView = Backbone.View.extend({
 =======
 =======
 >>>>>>> master
+=======
+>>>>>>> master
 			if(children[i].name && children[i].name !== 'THREE.PointLight' && children[i].name !== 'THREE.SpotLight' && children[i].name !== 'THREE.AmbientLight') {
 
 				opt = document.createElement('option');
@@ -112,6 +131,9 @@ THREEFAB.OutlinerView = Backbone.View.extend({
 				opt.setAttribute('value', children[i].name);
 				this.select.append(opt);
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 =======
 >>>>>>> master

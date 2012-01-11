@@ -13,7 +13,11 @@ THREEFAB.AmbientLightContainer = function ( scene, hex) {
 	lineGeometry.vertices.push( new THREE.Vertex() );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	lineGeometry.vertices.push( new THREE.Vertex( new THREE.Vector3( 0, 15, 1 ) ) );	
+=======
+	lineGeometry.vertices.push( new THREE.Vertex( new THREE.Vector3( 0, 15, 1 ) ) );
+>>>>>>> master
 =======
 	lineGeometry.vertices.push( new THREE.Vertex( new THREE.Vector3( 0, 15, 1 ) ) );
 >>>>>>> master
@@ -33,11 +37,14 @@ THREEFAB.AmbientLightContainer = function ( scene, hex) {
 	
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	mesh.name = "THREE.PointLightContainer." + mesh.id;
 	
 	
 	var light = new THREE.AmbientLight(hex);
 =======
+=======
+>>>>>>> master
 =======
 >>>>>>> master
 	mesh.name = "THREE.AmbientLightContainer." + mesh.id;
@@ -46,6 +53,9 @@ THREEFAB.AmbientLightContainer = function ( scene, hex) {
 	var light = new THREE.AmbientLight(hex);
 	light.name = 'THREE.AmbientLight';
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 =======
 >>>>>>> master
@@ -57,7 +67,10 @@ THREEFAB.AmbientLightContainer = function ( scene, hex) {
 	mesh.light = light;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	console.log(light);
+=======
+>>>>>>> master
 =======
 >>>>>>> master
 =======
