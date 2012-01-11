@@ -2,25 +2,43 @@ ThreeFab
 =============
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ThreeFab is a tool that allows designers and devlopers to quickly fabricate and manipulate a three.js scene.
 
 For those not familiar with [Three.js][1] 
 
 [1]: https://github.com/mrdoob/three.js
 =======
+=======
+>>>>>>> master
 ThreeFab is a tool that allows designers and developers to quickly fabricate and manipulate a three.js scene.  This is currently an alpha build as a proof of concept. You will need a WebGL capable browser.
 
 For those not familiar with [Three.js][1] 
 
 [1]: https://github.com/mrdoob/three.js
 
+<<<<<<< HEAD
+=======
+[TRY IT OUT][2]
+[2]: http://blackjk3.github.com/threefab/
+
+>>>>>>> master
 Controls
 =============
 
 Key controls
 -------------
+<<<<<<< HEAD
 S - Zoom in and out on scene
 X - Delete selected object
+=======
+* S - Zoom in and out on scene
+* X - Delete selected object
+
+Viewport
+-------------
+To move the camera click and drag anywhere in the viewport.  
+>>>>>>> master
 
 Positioning objects
 -------------
@@ -28,7 +46,11 @@ To position an object you can use the manipulator tool or use the individual pos
 
 Transforms
 -------------
+<<<<<<< HEAD
 The transforms are setup in blocks of three coordinates (x,y,z).  The first block is for position, second is for rotation, third is for scale.
+=======
+The transforms are setup in blocks of three coordinates (x,y,z).  The first block is for position, second is for rotation, third is for scale.  Note: Rotation is currently in radians. 
+>>>>>>> master
 
 Outliner
 -------------
@@ -41,4 +63,12 @@ To add a texture first select a model and drag and drop the image on to the view
 Exporter
 -------------
 To generate and export the current three.js code click the generate button in the top right.  Note: You will need to update the paths for any textured materials and JSON models.  Threefab will put a placeholer url that will need to be modified.
+<<<<<<< HEAD
+>>>>>>> master
+=======
+
+Screenshots
+=============
+![Screenshot](http://blackjk3.github.com/threefab/assets/screenie0.jpg)
+![Screenshot 2](http://blackjk3.github.com/threefab/assets/screenie1.jpg)
 >>>>>>> master

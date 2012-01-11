@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /** 
  * @class THREEFAB.Ui
  * 
@@ -7,6 +8,8 @@
  * @param [THREEFAB.Viewport] viewport The instance of the viewport class.	
  * 
 =======
+=======
+>>>>>>> master
 /**
  * @class THREEFAB.Ui
  *
@@ -14,6 +17,9 @@
  * @description Sets up ui components for threefab.  Dependency on dat.gui.
  * @param [THREEFAB.Viewport] viewport The instance of the viewport class.
  *
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
  */
  
@@ -29,7 +35,11 @@ THREEFAB.Ui = function(viewport) {
 	this.transformView.render();
 	
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+};
+>>>>>>> master
 =======
 };
 >>>>>>> master
@@ -67,12 +77,15 @@ THREEFAB.Ui.utils = {
 					tmp_controller.step(list[i].step);
 				}
 <<<<<<< HEAD
+<<<<<<< HEAD
 				
 				/*if(list[i].onChange !== undefined) {
 					
 					tmp_controller.onChange(view[list[i].onChange].apply(view, [undefined]));
 					console.log("Setup :: Changing Property :: ");
 				}*/
+=======
+>>>>>>> master
 =======
 >>>>>>> master
 			}

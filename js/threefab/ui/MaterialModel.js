@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /** 
  * @class THREEFAB.MaterialModel
  * 
@@ -6,18 +7,24 @@
  * @description Sets up material model for the right hand material panel.
  * 
 =======
+=======
+>>>>>>> master
 /**
  * @class THREEFAB.MaterialModel
  *
  * @author itooamaneatguy / http://kadrmasconcepts.com/blog/
  * @description Sets up material model for the right hand material panel.
  *
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
  */
 
 THREEFAB.MaterialModel = Backbone.Model.extend({
 
 	materialList: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 		 {
 		 	prop:'wireframe'
@@ -48,6 +55,8 @@ THREEFAB.MaterialModel = Backbone.Model.extend({
 		 	prop:'shininess'
 		 }
 =======
+=======
+>>>>>>> master
 		{
 			prop:'wireframe'
 		},
@@ -76,14 +85,22 @@ THREEFAB.MaterialModel = Backbone.Model.extend({
 		{
 			prop:'shininess'
 		}
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 	],
 
 	lightList: [
 		{
 <<<<<<< HEAD
+<<<<<<< HEAD
 			prop: 'intensity', 
 			min:0, 
+=======
+			prop: 'intensity',
+			min:0,
+>>>>>>> master
 =======
 			prop: 'intensity',
 			min:0,

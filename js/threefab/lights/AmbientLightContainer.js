@@ -12,7 +12,11 @@ THREEFAB.AmbientLightContainer = function ( scene, hex) {
 	var lineGeometry = new THREE.Geometry();
 	lineGeometry.vertices.push( new THREE.Vertex() );
 <<<<<<< HEAD
+<<<<<<< HEAD
 	lineGeometry.vertices.push( new THREE.Vertex( new THREE.Vector3( 0, 15, 1 ) ) );	
+=======
+	lineGeometry.vertices.push( new THREE.Vertex( new THREE.Vector3( 0, 15, 1 ) ) );
+>>>>>>> master
 =======
 	lineGeometry.vertices.push( new THREE.Vertex( new THREE.Vector3( 0, 15, 1 ) ) );
 >>>>>>> master
@@ -28,16 +32,22 @@ THREEFAB.AmbientLightContainer = function ( scene, hex) {
 	}
 	
 <<<<<<< HEAD
+<<<<<<< HEAD
 	mesh.name = "THREE.PointLightContainer." + mesh.id;
 	
 	
 	var light = new THREE.AmbientLight(hex);
 =======
+=======
+>>>>>>> master
 	mesh.name = "THREE.AmbientLightContainer." + mesh.id;
 	
 	
 	var light = new THREE.AmbientLight(hex);
 	light.name = 'THREE.AmbientLight';
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 	
 	// Link light position and rotation to the fake holder object.
@@ -46,7 +56,10 @@ THREEFAB.AmbientLightContainer = function ( scene, hex) {
 	
 	mesh.light = light;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	console.log(light);
+=======
+>>>>>>> master
 =======
 >>>>>>> master
 	

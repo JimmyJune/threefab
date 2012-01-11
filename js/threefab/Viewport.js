@@ -11,7 +11,11 @@ THREEFAB.Viewport = function( parameters ) {
 	
 	var _radius = 500,
 <<<<<<< HEAD
+<<<<<<< HEAD
 	    _height = window.innerHeight,
+=======
+		_height = window.innerHeight,
+>>>>>>> master
 =======
 		_height = window.innerHeight,
 >>>>>>> master
@@ -25,7 +29,11 @@ THREEFAB.Viewport = function( parameters ) {
 		_SELECTED_AXIS,
 		_projector = new THREE.Projector(),
 <<<<<<< HEAD
+<<<<<<< HEAD
 		SHADOW_MAP_WIDTH = 2048, 
+=======
+		SHADOW_MAP_WIDTH = 2048,
+>>>>>>> master
 =======
 		SHADOW_MAP_WIDTH = 2048,
 >>>>>>> master
@@ -33,6 +41,7 @@ THREEFAB.Viewport = function( parameters ) {
 	
 	_container.style.position = 'absolute';
 	_container.style.overflow = 'hidden';
+<<<<<<< HEAD
 <<<<<<< HEAD
 		
 	parameters = parameters || {};
@@ -48,6 +57,8 @@ THREEFAB.Viewport = function( parameters ) {
 	this.camera.position.y = 150;
 	this.camera.position.z = 300;
 =======
+=======
+>>>>>>> master
 
 	parameters = parameters || {};
 	
@@ -61,6 +72,9 @@ THREEFAB.Viewport = function( parameters ) {
 	this.camera.position.y = 250;
 	this.camera.position.z = 500;
 	this.camera.lookAt( new THREE.Vector3() );
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 	
 	// Setup renderer
@@ -95,7 +109,11 @@ THREEFAB.Viewport = function( parameters ) {
 	
 	// Scene
 <<<<<<< HEAD
+<<<<<<< HEAD
 	this.scene = new THREE.Scene();	
+=======
+	this.scene = new THREE.Scene();
+>>>>>>> master
 =======
 	this.scene = new THREE.Scene();
 >>>>>>> master
@@ -104,7 +122,11 @@ THREEFAB.Viewport = function( parameters ) {
 	if(this.grid) {
 		this.grid = new THREE.Grid();
 <<<<<<< HEAD
+<<<<<<< HEAD
 	  	this.scene.add(this.grid);
+=======
+		this.scene.add(this.grid);
+>>>>>>> master
 =======
 		this.scene.add(this.grid);
 >>>>>>> master
@@ -116,6 +138,7 @@ THREEFAB.Viewport = function( parameters ) {
 	
 	// Drag and drop functionality
 <<<<<<< HEAD
+<<<<<<< HEAD
 	$.subscribe('model/loaded', $.proxy(this.addModel, this));
 	$.subscribe('texture/loaded', $.proxy(this.addTexture, this));
 	$.subscribe('primitive/add', $.proxy(this.addPrimitive, this));
@@ -124,6 +147,8 @@ THREEFAB.Viewport = function( parameters ) {
 
 	$.subscribe('outliner/changed', outlinerChanged);
 =======
+=======
+>>>>>>> master
 	$.subscribe(THREEFAB.Events.MODEL_LOADED, $.proxy(this.addModel, this));
 	$.subscribe(THREEFAB.Events.TEXTURE_LOADED, $.proxy(this.addTexture, this));
 	$.subscribe(THREEFAB.Events.PRIMITIVE_ADDED, $.proxy(this.addPrimitive, this));
@@ -131,6 +156,9 @@ THREEFAB.Viewport = function( parameters ) {
 	$.subscribe(THREEFAB.Events.TEXTURE_CLEAR, $.proxy(this.clearTexture, this));
 
 	$.subscribe(THREEFAB.Events.OUTLINER_CHANGED, outlinerChanged);
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 
 	// =============================================================================
@@ -161,7 +189,12 @@ THREEFAB.Viewport = function( parameters ) {
 
 		_this.camera.aspect = width / height;
 <<<<<<< HEAD
+<<<<<<< HEAD
 		_this.camera.toPerspective();
+=======
+		//_this.camera.toPerspective();
+		_this.camera.updateProjectionMatrix();
+>>>>>>> master
 =======
 		//_this.camera.toPerspective();
 		_this.camera.updateProjectionMatrix();
@@ -185,15 +218,21 @@ THREEFAB.Viewport = function( parameters ) {
 		if(!_this._SELECTED.light) {
 			// It's a mesh!
 <<<<<<< HEAD
+<<<<<<< HEAD
 			$.publish('viewport/mesh/selected', object);
 		} else {
 			// It's a light!
 			$.publish('viewport/light/selected', object);
 =======
+=======
+>>>>>>> master
 			$.publish(THREEFAB.Events.VIEWPORT_MESH_SELECTED, object);
 		} else {
 			// It's a light!
 			$.publish(THREEFAB.Events.VIEWPORT_LIGHT_SELECTED, object);
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 			_this._SELECTED.material.program = null;
 			_this._SELECTED.material.overdraw = true;
@@ -215,10 +254,13 @@ THREEFAB.Viewport = function( parameters ) {
 	};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/** 
 	 * Private functions
 	 *
 	*/
+=======
+>>>>>>> master
 =======
 >>>>>>> master
 
@@ -227,7 +269,11 @@ THREEFAB.Viewport = function( parameters ) {
 		var child = _this.scene.getChildByName(name);
 		_this.selected(child);
 <<<<<<< HEAD
+<<<<<<< HEAD
 	};
+=======
+	}
+>>>>>>> master
 =======
 	}
 >>>>>>> master
@@ -244,7 +290,11 @@ THREEFAB.Viewport = function( parameters ) {
 	// ----------------------------------------
 	
 <<<<<<< HEAD
+<<<<<<< HEAD
 	this.renderer.domElement.addEventListener( 'mousedown', function ( event ) { 
+=======
+	this.renderer.domElement.addEventListener( 'mousedown', function ( event ) {
+>>>>>>> master
 =======
 	this.renderer.domElement.addEventListener( 'mousedown', function ( event ) {
 >>>>>>> master
@@ -277,7 +327,11 @@ THREEFAB.Viewport = function( parameters ) {
 			}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 		} 
+=======
+		}
+>>>>>>> master
 =======
 		}
 >>>>>>> master
@@ -291,7 +345,11 @@ THREEFAB.Viewport = function( parameters ) {
 	// ----------------------------------------
 	
 <<<<<<< HEAD
+<<<<<<< HEAD
 	this.renderer.domElement.addEventListener('mouseup', function(event) { 
+=======
+	this.renderer.domElement.addEventListener('mouseup', function(event) {
+>>>>>>> master
 =======
 	this.renderer.domElement.addEventListener('mouseup', function(event) {
 >>>>>>> master
@@ -310,7 +368,11 @@ THREEFAB.Viewport = function( parameters ) {
 		event.preventDefault();
 		
 <<<<<<< HEAD
+<<<<<<< HEAD
 		_prev_mouse.x = _mouse.x,
+=======
+		_prev_mouse.x = _mouse.x;
+>>>>>>> master
 =======
 		_prev_mouse.x = _mouse.x;
 >>>>>>> master
@@ -323,7 +385,11 @@ THREEFAB.Viewport = function( parameters ) {
 	
 			var tx = (_mouse.x - _prev_mouse.x) * 1000;
 <<<<<<< HEAD
+<<<<<<< HEAD
 			var ty = (_mouse.y - _prev_mouse.y) * 1000;	
+=======
+			var ty = (_mouse.y - _prev_mouse.y) * 1000;
+>>>>>>> master
 =======
 			var ty = (_mouse.y - _prev_mouse.y) * 1000;
 >>>>>>> master
@@ -351,6 +417,7 @@ THREEFAB.Viewport = function( parameters ) {
 		var code;
 		
 <<<<<<< HEAD
+<<<<<<< HEAD
 	    if (!e) {var e = window.event;}
 	    if (e.keyCode) { 
 	    	code = e.keyCode;
@@ -372,6 +439,8 @@ THREEFAB.Viewport = function( parameters ) {
 	    		// Get the next mesh and select that one
 	    		for(var i=0, len = _this.scene.children.length; i < len; i++) {
 =======
+=======
+>>>>>>> master
 		if (!e) { e = window.event; }
 		if (e.keyCode) {
 			code = e.keyCode;
@@ -390,6 +459,9 @@ THREEFAB.Viewport = function( parameters ) {
 
 				// Get the next mesh and select that one
 				for(var i=0, len = _this.scene.children.length; i < len; i++) {
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 		
 					if(_this.scene.children[i].name) {
@@ -397,23 +469,30 @@ THREEFAB.Viewport = function( parameters ) {
 						break;
 					}
 <<<<<<< HEAD
+<<<<<<< HEAD
 				} 
 
 	    		$.publish('viewport/object/removed', _this.scene);
 	    	}
 	    }
 =======
+=======
+>>>>>>> master
 				}
 
 				$.publish(THREEFAB.Events.VIEWPORT_OBJECT_REMOVED, _this.scene);
 			}
 		}
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 	});
 };
 
 THREEFAB.Viewport.prototype = {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -430,6 +509,8 @@ THREEFAB.Viewport.prototype = {
 		material = new THREE.MeshPhongMaterial( { wireframe: false, map: new THREEFAB.CanvasTexture(), shading: THREE.SmoothShading, overdraw:false } );
 		material.name = 'MeshPhongMaterial';	
 =======
+=======
+>>>>>>> master
 	addPrimitive: function(type) {
 		
 		var material,
@@ -442,6 +523,9 @@ THREEFAB.Viewport.prototype = {
 		
 		material = new THREE.MeshPhongMaterial( { wireframe: false, map: new THREEFAB.CanvasTexture(), shading: THREE.SmoothShading, overdraw: false } );
 		material.name = 'MeshPhongMaterial';
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 				
 		if(type === "sphere") {
@@ -457,7 +541,11 @@ THREEFAB.Viewport.prototype = {
 			geometry = new THREE.CylinderGeometry( 0, 50, 100, 16, 1 );
 			meshName = 'THREE.ConeGeometry';
 <<<<<<< HEAD
+<<<<<<< HEAD
 		} else if(type === "plane") {	
+=======
+		} else if(type === "plane") {
+>>>>>>> master
 =======
 		} else if(type === "plane") {
 >>>>>>> master
@@ -466,7 +554,11 @@ THREEFAB.Viewport.prototype = {
 			rotation = new THREE.Vector3(-Math.PI/2,0,0);
 			doubleSided = true;
 <<<<<<< HEAD
+<<<<<<< HEAD
 		} else if(type === "torus") {	
+=======
+		} else if(type === "torus") {
+>>>>>>> master
 =======
 		} else if(type === "torus") {
 >>>>>>> master
@@ -489,7 +581,11 @@ THREEFAB.Viewport.prototype = {
 		this.scene.add(mesh);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 		$.publish('viewport/object/added', this.scene);
+=======
+		$.publish(THREEFAB.Events.VIEWPORT_OBJECT_ADDED, this.scene);
+>>>>>>> master
 =======
 		$.publish(THREEFAB.Events.VIEWPORT_OBJECT_ADDED, this.scene);
 >>>>>>> master
@@ -500,6 +596,7 @@ THREEFAB.Viewport.prototype = {
 	addParticleSystem: function() {
 		// create the particle variables
 		var particleCount = 1800,
+<<<<<<< HEAD
 <<<<<<< HEAD
 		    particles = new THREE.Geometry(),
 		    pMaterial = new THREE.ParticleBasicMaterial({
@@ -515,10 +612,15 @@ THREEFAB.Viewport.prototype = {
 			particles = new THREE.Geometry(),
 			pMaterial = new THREE.ParticleBasicMaterial({ color: 0xFFFFFF, size: Math.random() * 25 + 10, map: THREE.ImageUtils.loadTexture( "img/particle.png" ), blending: THREE.AdditiveBlending, transparent: true });
 >>>>>>> master
+=======
+			particles = new THREE.Geometry(),
+			pMaterial = new THREE.ParticleBasicMaterial({ color: 0xFFFFFF, size: Math.random() * 25 + 10, map: THREE.ImageUtils.loadTexture( "img/particle.png" ), blending: THREE.AdditiveBlending, transparent: true });
+>>>>>>> master
 		
 		// now create the individual particles
 		for(var p = 0; p < particleCount; p++) {
 		
+<<<<<<< HEAD
 <<<<<<< HEAD
 		    // create a particle with random
 		    // position values, -250 -> 250
@@ -538,6 +640,8 @@ THREEFAB.Viewport.prototype = {
 		    particles,
 		    pMaterial);
 =======
+=======
+>>>>>>> master
 			// create a particle with random
 			// position values, -250 -> 250
 			var pX = Math.random() * 500 - 250,
@@ -551,6 +655,9 @@ THREEFAB.Viewport.prototype = {
 		
 		// create the particle system
 		var particleSystem = new THREE.ParticleSystem( particles, pMaterial);
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 		
 		particleSystem.sortParticles = true;
@@ -560,22 +667,32 @@ THREEFAB.Viewport.prototype = {
 	},
 	
 <<<<<<< HEAD
+<<<<<<< HEAD
 	addModel:function(mesh) {
 		this.scene.add(mesh);
 		this.selected(mesh);
 		$.publish('viewport/object/added', this.scene);
 =======
+=======
+>>>>>>> master
 	addModel: function(mesh) {
 		this.scene.add(mesh);
 		this.selected(mesh);
 		$.publish(THREEFAB.Events.VIEWPORT_OBJECT_ADDED, this.scene);
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 		
 		return mesh;
 	},
 	
 <<<<<<< HEAD
+<<<<<<< HEAD
 	addLight:function(type) {
+=======
+	addLight: function(type) {
+>>>>>>> master
 =======
 	addLight: function(type) {
 >>>>>>> master
@@ -596,7 +713,11 @@ THREEFAB.Viewport.prototype = {
 		this.resetMaterials();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 		$.publish('viewport/object/added', this.scene);
+=======
+		$.publish(THREEFAB.Events.VIEWPORT_OBJECT_ADDED, this.scene);
+>>>>>>> master
 =======
 		$.publish(THREEFAB.Events.VIEWPORT_OBJECT_ADDED, this.scene);
 >>>>>>> master
@@ -608,15 +729,21 @@ THREEFAB.Viewport.prototype = {
 		
 		this._SELECTED.material.program = null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 		this._SELECTED.material.map = tex;
 
 		$.publish('viewport/object/texture/added', this._SELECTED);
 =======
+=======
+>>>>>>> master
 		this._SELECTED.material.program = null;
 
 		this._SELECTED.material.map = tex;
 
 		$.publish(THREEFAB.Events.VIEWPORT_OBJECT_TEXTURE_ADDED, this._SELECTED);
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 	},
 
@@ -648,9 +775,15 @@ THREEFAB.Viewport.prototype = {
 		this._SELECTED = mesh;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 		$.publish('viewport/mesh/selected', mesh);
 	}	
 }
+=======
+		$.publish(THREEFAB.Events.VIEWPORT_MESH_SELECTED, mesh);
+	}
+};
+>>>>>>> master
 =======
 		$.publish(THREEFAB.Events.VIEWPORT_MESH_SELECTED, mesh);
 	}

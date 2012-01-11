@@ -19,6 +19,12 @@ THREEFAB.DragDropLoader = function() {
 
 		var file = event.dataTransfer.files[ 0 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+		if(file === undefined) { return false; }
+
+>>>>>>> master
 =======
 
 		if(file === undefined) { return false; }
@@ -30,6 +36,7 @@ THREEFAB.DragDropLoader = function() {
 
 		if(extension === "jpg" || extension === "png") {
 			isImage = true;
+<<<<<<< HEAD
 <<<<<<< HEAD
 		}	
 
@@ -54,6 +61,8 @@ THREEFAB.DragDropLoader = function() {
 			} else if(isImage) {
 				// We are dropping in a texture.
 =======
+=======
+>>>>>>> master
 		}
 
 		reader.onload = function ( event ) {
@@ -80,6 +89,9 @@ THREEFAB.DragDropLoader = function() {
 
 				// We are dropping in a texture.
 				
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 				var img = new Image();
 				img.src = contents;
@@ -88,7 +100,12 @@ THREEFAB.DragDropLoader = function() {
 				texture.needsUpdate = true;
 				
 <<<<<<< HEAD
+<<<<<<< HEAD
 				$.publish('texture/loaded', texture);	
+=======
+				$.publish(THREEFAB.Events.TEXTURE_LOADED, texture);
+			
+>>>>>>> master
 =======
 				$.publish(THREEFAB.Events.TEXTURE_LOADED, texture);
 			
@@ -101,14 +118,20 @@ THREEFAB.DragDropLoader = function() {
 			reader.readAsText( file );
 		} else if(isImage) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 			reader.readAsDataURL(file);	
 		}
 				
 	});				
 =======
+=======
+>>>>>>> master
 			reader.readAsDataURL(file);
 		}
 				
 	});
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 };
