@@ -1,36 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-/** 
- * @class THREEFAB.TransformView
- * 
- * @author itooamaneatguy / http://kadrmasconcepts.com/blog/
- * @description Setup transform view.
- * 
-=======
-=======
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
 /**
  * @class THREEFAB.TransformView
  *
  * @author itooamaneatguy / http://kadrmasconcepts.com/blog/
  * @description Setup transform view.
  *
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
  */
 
 
@@ -45,23 +18,7 @@ THREEFAB.TransformView = Backbone.View.extend({
 	folders: {
 		camera:{},
 		outliner:{},
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-		transforms:{},
-=======
 		transforms:{}
->>>>>>> master
-=======
-		transforms:{}
->>>>>>> master
-=======
-		transforms:{}
->>>>>>> master
-=======
-		transforms:{}
->>>>>>> master
 	},
 	
 	initialize: function() {
@@ -72,28 +29,8 @@ THREEFAB.TransformView = Backbone.View.extend({
 		this.viewport = arguments[0].viewport;
 
 		// Listen to when an object is selected.
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-		$.subscribe('viewport/mesh/selected', this.addTransformOptions);
-		$.subscribe('viewport/light/selected', this.addTransformOptions);
-=======
 		$.subscribe(THREEFAB.Events.VIEWPORT_MESH_SELECTED, this.addTransformOptions);
 		$.subscribe(THREEFAB.Events.VIEWPORT_LIGHT_SELECTED, this.addTransformOptions);
->>>>>>> master
-=======
-		$.subscribe(THREEFAB.Events.VIEWPORT_MESH_SELECTED, this.addTransformOptions);
-		$.subscribe(THREEFAB.Events.VIEWPORT_LIGHT_SELECTED, this.addTransformOptions);
->>>>>>> master
-=======
-		$.subscribe(THREEFAB.Events.VIEWPORT_MESH_SELECTED, this.addTransformOptions);
-		$.subscribe(THREEFAB.Events.VIEWPORT_LIGHT_SELECTED, this.addTransformOptions);
->>>>>>> master
-=======
-		$.subscribe(THREEFAB.Events.VIEWPORT_MESH_SELECTED, this.addTransformOptions);
-		$.subscribe(THREEFAB.Events.VIEWPORT_LIGHT_SELECTED, this.addTransformOptions);
->>>>>>> master
 
 	},
 	
@@ -157,23 +94,7 @@ THREEFAB.TransformView = Backbone.View.extend({
 		
 		if(!selected.light) {
 			
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-			// Scale 
-=======
 			// Scale
->>>>>>> master
-=======
-			// Scale
->>>>>>> master
-=======
-			// Scale
->>>>>>> master
-=======
-			// Scale
->>>>>>> master
 			this.folders.transforms.add(selected.scale, 'x', 0);
 			this.folders.transforms.add(selected.scale, 'y', 0);
 			this.folders.transforms.add(selected.scale, 'z', 0);

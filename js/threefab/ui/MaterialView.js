@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-/** 
- * @class THREEFAB.MaterialView
- * 
- * @author itooamaneatguy / http://kadrmasconcepts.com/blog/
- * @description Setup for material view.
- * 
-=======
-=======
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
 /**
  *
  * @class THREEFAB.MaterialView
@@ -22,16 +5,6 @@
  * @author itooamaneatguy / http://kadrmasconcepts.com/blog/
  * @description Setup for material view.
  *
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
  */
 
 
@@ -42,53 +15,14 @@ THREEFAB.MaterialView = Backbone.View.extend({
 	selected: {},
 	texture: {},
 	color: {},
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 	light: {},
->>>>>>> master
-=======
-	light: {},
->>>>>>> master
-=======
-	light: {},
->>>>>>> master
-=======
-	light: {},
->>>>>>> master
 	
 	folders: {
 		materials:{},
 		lights:{},
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-		textures:{},
-	},
-	
-=======
 		textures:{}
 	},
 
->>>>>>> master
-=======
-		textures:{}
-	},
-
->>>>>>> master
-=======
-		textures:{}
-	},
-
->>>>>>> master
-=======
-		textures:{}
-	},
-
->>>>>>> master
 	initialize: function() {
 		
 		_.bindAll(this);
@@ -96,41 +30,12 @@ THREEFAB.MaterialView = Backbone.View.extend({
 		this.el = $(this.el);
 		this.selected = arguments[0].selected;
 	
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-		$.subscribe('viewport/mesh/selected', this.meshChanged);
-		$.subscribe('viewport/light/selected', this.lightChanged);
-		$.subscribe('material/color/changed', this.changeColor);
-	},
-	
-	/**
-	 *  Renders the current material dat.GUI view.
-	 */
-=======
-=======
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
 		$.subscribe(THREEFAB.Events.VIEWPORT_MESH_SELECTED, this.meshChanged);
 		$.subscribe(THREEFAB.Events.VIEWPORT_LIGHT_SELECTED, this.lightChanged);
 		$.subscribe(THREEFAB.Events.MATERIAL_COLOR_CHANGED, this.changeColor);
 		$.subscribe(THREEFAB.Events.LIGHT_COLOR_CHANGED, this.changeLightColor);
 	},
 	
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
 	
 	render: function() {
 		
@@ -143,19 +48,6 @@ THREEFAB.MaterialView = Backbone.View.extend({
 		this.folders.textures = this.gui.addFolder('Texture');
 		this.folders.lights = this.gui.addFolder('Light');
 		
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-		
-=======
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
 		this.folders.materials.open();
 		this.folders.textures.open();
 
@@ -170,42 +62,12 @@ THREEFAB.MaterialView = Backbone.View.extend({
 		this.folders.textures.__ul.appendChild(this.texture.el[0]);
 		this.texture.render(this.selected);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-	},
-
-	/**
-	 * Listens to when the mesh changes and updates the material panel.
-	 * @function meshChanged
-	 * @param {THREE.Mesh} object
-	 *
-	 */
-
-=======
-=======
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
 		// Light view
 		this.light = new THREEFAB.LightView();
 		this.folders.lights.__ul.appendChild(this.light.el[0]);
 		this.light.el.hide();
 	},
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
 	meshChanged: function(object) {
 
 		this.selected = object;
@@ -216,76 +78,21 @@ THREEFAB.MaterialView = Backbone.View.extend({
 		this.addMaterialOptions();
 		
 		this.folders.materials.open();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-	 	this.folders.textures.open();
-	 	this.color.el.show();
-	 	this.texture.el.show();
-	 	
-=======
-=======
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
 		this.folders.textures.open();
 		this.color.el.show();
 		this.texture.el.show();
 		
 		this.light.el.hide();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
 		//this.rebuildMaterial();
 
 	},
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-	/**
-	 * Listens to when the light changes and updates the material panel.
-	 * @function lightChanged
-	 * @param {THREE.Mesh} object
-	 *
-	 */
-
-	lightChanged: function(object) {
-		
-=======
-=======
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
 
 	lightChanged: function(object) {
 		
 		this.selected = object;
 
 		this.light.el.show();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
 			
 		this.folders.materials.close();
 		this.color.el.hide();
@@ -295,23 +102,7 @@ THREEFAB.MaterialView = Backbone.View.extend({
 
 		this.resetControllers();
 		
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-		THREEFAB.Ui.utils.addProperties( object, this.model.lightList, this.folders.lights );
-=======
 		THREEFAB.Ui.utils.addProperties( object.light, this.model.lightList, this.folders.lights );
->>>>>>> master
-=======
-		THREEFAB.Ui.utils.addProperties( object.light, this.model.lightList, this.folders.lights );
->>>>>>> master
-=======
-		THREEFAB.Ui.utils.addProperties( object.light, this.model.lightList, this.folders.lights );
->>>>>>> master
-=======
-		THREEFAB.Ui.utils.addProperties( object.light, this.model.lightList, this.folders.lights );
->>>>>>> master
 		
 		this.folders.lights.open();
 
@@ -325,25 +116,6 @@ THREEFAB.MaterialView = Backbone.View.extend({
 	},
 
 	
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-	/**
-	 * Loops through the materialList from model and adds values to ui. 
-	 * 
-	 * @function MaterialView.addMaterialOptions
-	 * @see MaterialModel
-	 */
-	
-=======
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
 	addMaterialOptions: function() {
 		
 		// Add Material shader options.
@@ -351,23 +123,6 @@ THREEFAB.MaterialView = Backbone.View.extend({
 	
 		// Loop and add material properties.
 		THREEFAB.Ui.utils.addProperties(this.selected.material, this.model.materialList, this.folders.materials, this);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-		
-		// Add color stuff.
-		// TODO: Fix this later with some sort of UI color util.
-		
-		//this.folders.materials.addColor(this.selected.material, 'color').onChange(this.changeColor);
-=======
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
 	},
 
 	changeColor: function(c, type) {
@@ -378,32 +133,11 @@ THREEFAB.MaterialView = Backbone.View.extend({
 			this.rebuildMaterial();
 		}
 	},
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
 
 	changeLightColor: function(c) {
 		
 		this.selected.light.color = new THREE.Color().setRGB(c.r/255, c.g/255, c.b/255);
 	},
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
 	
 	rebuildMaterial: function(matName){
 		
@@ -432,35 +166,10 @@ THREEFAB.MaterialView = Backbone.View.extend({
 		}
 		
 		// Copy the map and color manually.
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-		mat['map'] = this.selected.material['map'];
-		mat['color'] = this.selected.material['color'];
-		mat['ambient'] = this.selected.material['ambient'];
-		mat['specular'] = this.selected.material['specular'];
-=======
-=======
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
 		mat.map = this.selected.material.map;
 		mat.color = this.selected.material.color;
 		mat.ambient = this.selected.material.ambient;
 		mat.specular = this.selected.material.specular;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
 		
 	}
 	

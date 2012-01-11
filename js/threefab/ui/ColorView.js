@@ -1,36 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-/** 
- * @class THREEFAB.ColorView
- * 
- * @author itooamaneatguy / http://kadrmasconcepts.com/blog/
- * @description Setup color view.
- * 
-=======
-=======
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
 /**
  * @class THREEFAB.ColorView
  *
  * @author itooamaneatguy / http://kadrmasconcepts.com/blog/
  * @description Setup color view.
  *
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
  */
 
 
@@ -64,23 +37,7 @@ THREEFAB.ColorView = Backbone.View.extend({
 		this.el.append( this.types.ambient );
 		this.el.append( this.types.specular );
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-		$.subscribe('viewport/mesh/selected', this.meshChanged);
-=======
 		$.subscribe(THREEFAB.Events.VIEWPORT_MESH_SELECTED, this.meshChanged);
->>>>>>> master
-=======
-		$.subscribe(THREEFAB.Events.VIEWPORT_MESH_SELECTED, this.meshChanged);
->>>>>>> master
-=======
-		$.subscribe(THREEFAB.Events.VIEWPORT_MESH_SELECTED, this.meshChanged);
->>>>>>> master
-=======
-		$.subscribe(THREEFAB.Events.VIEWPORT_MESH_SELECTED, this.meshChanged);
->>>>>>> master
 	},
 
 	meshChanged: function( object ) {
@@ -97,67 +54,19 @@ THREEFAB.ColorView = Backbone.View.extend({
 	changeColor: function( hsb, hex, rgb ) {
 	
 		this.update(this.types.color, rgb);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-		$.publish('material/color/changed', [rgb, 'color']);
-=======
 		$.publish(THREEFAB.Events.MATERIAL_COLOR_CHANGED, [rgb, 'color']);
->>>>>>> master
-=======
-		$.publish(THREEFAB.Events.MATERIAL_COLOR_CHANGED, [rgb, 'color']);
->>>>>>> master
-=======
-		$.publish(THREEFAB.Events.MATERIAL_COLOR_CHANGED, [rgb, 'color']);
->>>>>>> master
-=======
-		$.publish(THREEFAB.Events.MATERIAL_COLOR_CHANGED, [rgb, 'color']);
->>>>>>> master
 	},
 
 	changeAmbient: function( hsb, hex, rgb ) {
 	
 		this.update(this.types.ambient, rgb);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-		$.publish('material/color/changed', [rgb, 'ambient']);
-=======
 		$.publish(THREEFAB.Events.MATERIAL_COLOR_CHANGED, [rgb, 'ambient']);
->>>>>>> master
-=======
-		$.publish(THREEFAB.Events.MATERIAL_COLOR_CHANGED, [rgb, 'ambient']);
->>>>>>> master
-=======
-		$.publish(THREEFAB.Events.MATERIAL_COLOR_CHANGED, [rgb, 'ambient']);
->>>>>>> master
-=======
-		$.publish(THREEFAB.Events.MATERIAL_COLOR_CHANGED, [rgb, 'ambient']);
->>>>>>> master
 	},
 
 	changeSpecular: function( hsb, hex, rgb ) {
 	
 		this.update(this.types.specular, rgb);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-		$.publish('material/color/changed', [rgb, 'specular']);
-=======
 		$.publish(THREEFAB.Events.MATERIAL_COLOR_CHANGED, [rgb, 'specular']);
->>>>>>> master
-=======
-		$.publish(THREEFAB.Events.MATERIAL_COLOR_CHANGED, [rgb, 'specular']);
->>>>>>> master
-=======
-		$.publish(THREEFAB.Events.MATERIAL_COLOR_CHANGED, [rgb, 'specular']);
->>>>>>> master
-=======
-		$.publish(THREEFAB.Events.MATERIAL_COLOR_CHANGED, [rgb, 'specular']);
->>>>>>> master
 	},
 
 	update: function(type, rgb) {

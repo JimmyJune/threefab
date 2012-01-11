@@ -11,23 +11,7 @@ THREEFAB.SpotLightContainer = function ( scene, hex, intensity, distance ) {
 		
 	var lineGeometry = new THREE.Geometry();
 	lineGeometry.vertices.push( new THREE.Vertex() );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-	lineGeometry.vertices.push( new THREE.Vertex( new THREE.Vector3( 0, 50, 1 ) ) );	
-=======
 	lineGeometry.vertices.push( new THREE.Vertex( new THREE.Vector3( 0, 50, 1 ) ) );
->>>>>>> master
-=======
-	lineGeometry.vertices.push( new THREE.Vertex( new THREE.Vector3( 0, 50, 1 ) ) );
->>>>>>> master
-=======
-	lineGeometry.vertices.push( new THREE.Vertex( new THREE.Vector3( 0, 50, 1 ) ) );
->>>>>>> master
-=======
-	lineGeometry.vertices.push( new THREE.Vertex( new THREE.Vector3( 0, 50, 1 ) ) );
->>>>>>> master
 	
 	var line = new THREE.Line( lineGeometry, new THREE.LineBasicMaterial( { color : 0xFFFFFF } ) );
 	line.rotation.z = -Math.PI;
@@ -36,41 +20,13 @@ THREEFAB.SpotLightContainer = function ( scene, hex, intensity, distance ) {
 	
 	
 	var light = new THREE.SpotLight(hex, intensity, distance, true);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 	light.name = 'THREE.SpotLight';
->>>>>>> master
-=======
-	light.name = 'THREE.SpotLight';
->>>>>>> master
-=======
-	light.name = 'THREE.SpotLight';
->>>>>>> master
-=======
-	light.name = 'THREE.SpotLight';
->>>>>>> master
 	
 	// Link light position and rotation to the fake holder object.
 	light.position = mesh.position;
 	light.rotation = mesh.rotation;
 	
 	mesh.light = light;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-	console.log(light);
-=======
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
 	
 	scene.add(mesh);
 	scene.add(light);

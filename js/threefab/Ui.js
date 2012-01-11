@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-/** 
- * @class THREEFAB.Ui
- * 
- * @author itooamaneatguy / http://kadrmasconcepts.com/blog/
- * @description Sets up ui components for threefab.  Dependency on dat.gui.
- * @param [THREEFAB.Viewport] viewport The instance of the viewport class.	
- * 
-=======
-=======
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
 /**
  * @class THREEFAB.Ui
  *
@@ -23,16 +5,6 @@
  * @description Sets up ui components for threefab.  Dependency on dat.gui.
  * @param [THREEFAB.Viewport] viewport The instance of the viewport class.
  *
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
  */
  
 THREEFAB.Ui = function(viewport) {
@@ -46,23 +18,7 @@ THREEFAB.Ui = function(viewport) {
 	this.materialView.render();
 	this.transformView.render();
 	
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
 };
->>>>>>> master
-=======
-};
->>>>>>> master
-=======
-};
->>>>>>> master
-=======
-};
->>>>>>> master
 
 
 /**
@@ -96,24 +52,6 @@ THREEFAB.Ui.utils = {
 				if(list[i].step !== undefined) {
 					tmp_controller.step(list[i].step);
 				}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-				
-				/*if(list[i].onChange !== undefined) {
-					
-					tmp_controller.onChange(view[list[i].onChange].apply(view, [undefined]));
-					console.log("Setup :: Changing Property :: ");
-				}*/
-=======
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
 			}
 		
 		}
