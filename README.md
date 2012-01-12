@@ -16,6 +16,7 @@ Controls
 Key controls
 -------------
 * S - Zoom in and out on scene
+* D - Pan around scene
 * X - Delete selected object
 
 Viewport

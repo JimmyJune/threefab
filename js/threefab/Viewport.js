@@ -413,13 +413,14 @@ THREEFAB.Viewport.prototype = {
 	},
 	
 	addTexture: function(tex) {
-		
-		this._SELECTED.material.program = null;
-		this._SELECTED.material.program = null;
+		if(!this._SELECTED.light) {
+			this._SELECTED.material.program = null;
+			this._SELECTED.material.program = null;
 
-		this._SELECTED.material.map = tex;
+			this._SELECTED.material.map = tex;
 
-		$.publish(THREEFAB.Events.VIEWPORT_OBJECT_TEXTURE_ADDED, this._SELECTED);
+			$.publish(THREEFAB.Events.VIEWPORT_OBJECT_TEXTURE_ADDED, this._SELECTED);
+		}
 	},
 
 	clearTexture: function() {
