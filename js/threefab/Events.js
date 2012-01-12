@@ -10,6 +10,7 @@ THREEFAB.Events = {
 	VIEWPORT_OBJECT_TEXTURE_ADDED: 'viewport/object/texture/added',
 	VIEWPORT_OBJECT_REMOVED: 'viewport/object/removed',
 	VIEWPORT_OBJECT_ADDED: 'viewport/object/added',
+	VIEWPORT_TARGET_CENTER: 'viewport/target/center',
 
 	MATERIAL_COLOR_CHANGED: 'material/color/changed',
 	LIGHT_COLOR_CHANGED: 'light/color/changed',

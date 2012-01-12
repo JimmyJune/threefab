@@ -27,7 +27,7 @@
 		viewport.setSize( window.innerWidth, window.innerHeight );
 
 		//exporter.generate(viewport);
-		$.subscribe(THREEFAB.Events.EXPORTER_GENERATE, function(){
+		$.subscribe(THREEFAB.Events.EXPORTER_GENERATE, function() {
 			exporter.generate(viewport);
 		});
 

@@ -90,6 +90,7 @@ THREEFAB.Viewport = function( parameters ) {
 	$.subscribe(THREEFAB.Events.TEXTURE_CLEAR, $.proxy(this.clearTexture, this));
 
 	$.subscribe(THREEFAB.Events.OUTLINER_CHANGED, outlinerChanged);
+	$.subscribe(THREEFAB.Events.VIEWPORT_TARGET_CENTER, targetCenter);
 
 	// =============================================================================
 	// DEFAULT Light, Cube.  JUST LIKE BLENDER
@@ -120,6 +121,9 @@ THREEFAB.Viewport = function( parameters ) {
 		_this.camera.aspect = width / height;
 		//_this.camera.toPerspective();
 		_this.camera.updateProjectionMatrix();
+
+		_this.controls.screen.width = width;
+		_this.controls.screen.height = height;
 
 		_this.renderer.setSize( width, height );
 		_this.render();
@@ -166,6 +170,10 @@ THREEFAB.Viewport = function( parameters ) {
 		
 		var child = _this.scene.getChildByName(name);
 		_this.selected(child);
+	}
+
+	function targetCenter() {
+		_this.controls.target = new THREE.Vector3();
 	}
 	
 	
@@ -256,6 +264,18 @@ THREEFAB.Viewport = function( parameters ) {
 				_this._SELECTED.position.copy( _this.manipulator.position );
 			}
 		}
+	});
+
+	this.renderer.domElement.addEventListener( 'dblclick', function (e) {
+		
+		_this._SELECTED.geometry.computeBoundingBox();
+
+		var bb = _this._SELECTED.geometry.boundingBox;
+
+		_this.camera.position.x = _this._SELECTED.position.x;
+		_this.camera.position.y = _this._SELECTED.position.y + _this._SELECTED.boundRadius;
+		_this.camera.position.z = _this._SELECTED.position.z + (bb.z[1]+300);
+		_this.controls.target = _this._SELECTED.position;
 	});
 	
 	// ----------------------------------------
