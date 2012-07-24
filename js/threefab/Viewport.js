@@ -71,6 +71,7 @@ THREEFAB.Viewport = function( parameters ) {
 	
 	// Scene
 	this.scene = new THREE.Scene();
+	this.scene.add(this.camera);
 	
 	//Grid
 	if(this.grid) {
@@ -86,6 +87,7 @@ THREEFAB.Viewport = function( parameters ) {
 	$.subscribe(THREEFAB.Events.MODEL_LOADED, $.proxy(this.addModel, this));
 	$.subscribe(THREEFAB.Events.TEXTURE_LOADED, $.proxy(this.addTexture, this));
 	$.subscribe(THREEFAB.Events.PRIMITIVE_ADDED, $.proxy(this.addPrimitive, this));
+	$.subscribe(THREEFAB.Events.IMPORT_EXTERNAL, $.proxy(this.importExternal, this));
 	$.subscribe(THREEFAB.Events.LIGHT_ADDED, $.proxy(this.addLight, this));
 	$.subscribe(THREEFAB.Events.TEXTURE_CLEAR, $.proxy(this.clearTexture, this));
 
@@ -158,7 +160,7 @@ THREEFAB.Viewport = function( parameters ) {
 		pauseAnimation();
 
 		// Remove the current overdraw
-		if(_this._SELECTED) {
+		if(_this._SELECTED && _this._SELECTED.material) {
 			_this._SELECTED.material.program = null;
 			_this._SELECTED.material.overdraw = false;
 		}
@@ -347,21 +349,33 @@ THREEFAB.Viewport = function( parameters ) {
 		_projector.unprojectVector( vector, _this.camera );
 
 		var ray = new THREE.Ray( _this.camera.position, vector.subSelf( _this.camera.position ).normalize() );
-
-		var intersects = ray.intersectScene( _this.scene );
-
+		
+		var toIntersect = [];
+		THREE.SceneUtils.traverseHierarchy(_this.scene, function(child) {
+	        if (child instanceof THREE.Mesh && !(child.geometry instanceof THREE.PlaneGeometry)) {
+	            toIntersect.push(child);
+	        }
+		});
+		var intersects = ray.intersectObjects( toIntersect );
+		
 		if ( intersects.length > 0 ) {
+		    
+		    var hit = intersects[0].object;
+		    var is_manipulator = hit.name === "x_manipulator" || hit.name === "y_manipulator" || hit.name === "z_manipulator";
+		    while (!(is_manipulator || hit.parent instanceof THREE.Scene)) {
+		        hit = hit.parent;
+		    }
 			
 			// Are we already selected?
-			if ( _SELECTED_AXIS != intersects[ 0 ].object  && (intersects[ 0 ].object.name === "x_manipulator" || intersects[ 0 ].object.name === "y_manipulator" || intersects[ 0 ].object.name === "z_manipulator")) {
+			if ( _SELECTED_AXIS != hit  && is_manipulator) {
 
 				_this.controls.noRotate = true;
-				_SELECTED_AXIS = intersects[0].object;
+				_SELECTED_AXIS = hit;
 				
 			} else {
 				
 				// This is an object and not a grid handle.
-				_this.selected(intersects[0].object);
+				_this.selected(hit);
 				_SELECTED_DOWN = true;
 
 			}
@@ -516,6 +530,37 @@ THREEFAB.Viewport.prototype = {
 		return mesh;
 	},
 	
+    importExternal: function() {
+    
+        var txt = 'Enter a 3D model URL:<br />' +
+            '<input type="text" id="importURL" ' +
+            'name="importURL" value="" />';
+            
+        var _scene = this.scene;
+        function importcallback(e, v, m, f) {
+            if (v === 'Import') {
+            
+                loader = new THREE.ColladaLoader();
+                loader.options.convertUpAxis = true;
+                collada = loader.load( f.importURL, function(collada) {
+
+                    mesh = THREEFAB.PrepareCollada(collada);
+                    mesh.importURL = f.importURL;
+                    _scene.add(mesh);
+                
+                    $.publish(THREEFAB.Events.VIEWPORT_OBJECT_ADDED, _scene);
+            
+                });
+            }
+        }
+
+        $.prompt(txt, {
+            callback: importcallback,
+            buttons: { Import: 'Import', Cancel: 'Cancel' }
+        });
+        
+    },
+	
 	addParticleSystem: function() {
 		// create the particle variables
 		var particles = new THREE.Geometry(),
@@ -530,7 +575,7 @@ THREEFAB.Viewport.prototype = {
 			var pX = Math.random() * 500 - 250,
 				pY = Math.random() * 500 - 250,
 				pZ = Math.random() * 500 - 250,
-				particle = new THREE.Vertex( new THREE.Vector3(pX, pY, pZ) );
+				particle = new THREE.Vector3( pX, pY, pZ );
 			
 			// create a velocity vector
 			particle.velocity = new THREE.Vector3(
